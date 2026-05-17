@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Main white/silver gradient -->
+    <linearGradient id="mainGrad" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#e8ebf0"/>
+      <stop offset="100%" stop-color="#b8c0cc"/>
+    </linearGradient>
+
+    <!-- Shadow gradient for crescent -->
+    <linearGradient id="shadowGrad" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+
+    <!-- Soft glow filter -->
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!--
+    ╔═══════════════════════════════════════════════════════════╗
+    ║                     NIVORA LOGO                            ║
+    ║         Saturn/Planet with Orbital Ring                    ║
+    ║         Minimalist black & white design                    ║
+    ╚═══════════════════════════════════════════════════════════╝
+  -->
+
+  <!-- Background ring (behind planet) -->
+  <path
+    d="M 20 105
+       Q 50 85, 100 85
+       Q 150 85, 180 105"
+    fill="none"
+    stroke="url(#mainGrad)"
+    stroke-width="14"
+    stroke-linecap="round"
+    filter="url(#glow)"
+  />
+
+  <!-- Planet body with crescent cutout effect -->
+  <g filter="url(#glow)">
+    <!-- Main white/silver planet sphere -->
+    <circle cx="100" cy="100" r="38" fill="url(#mainGrad)"/>
+
+    <!-- Dark crescent shadow (creates the 3D moon/planet effect) -->
+    <path
+      d="M 115 65
+         A 38 38 0 0 1 115 135
+         A 50 50 0 0 0 115 65
+         Z"
+      fill="#0a0a0a"
+    />
+  </g>
+
+  <!-- Foreground ring (over planet) -->
+  <path
+    d="M 20 105
+       Q 50 125, 100 125
+       Q 150 125, 180 105"
+    fill="none"
+    stroke="url(#mainGrad)"
+    stroke-width="14"
+    stroke-linecap="round"
+    filter="url(#glow)"
+  />
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Primary gradient - white to silver (top-lit) -->
+    <linearGradient id="topLight" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#d8dce3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a0a8b4;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Secondary gradient for depth -->
+    <linearGradient id="bottomShadow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8cdd6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7a8494;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Accent blue gradient -->
+    <linearGradient id="blueAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#b1c5ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5b8def;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!--
+    NIVORA LOGO
+    Concept: Abstract compass/star representing navigation, intelligence, guidance
+    Style: Minimalist, elegant, similar to the butterfly aesthetic
+  -->
+
+  <!-- Top left petal/wing -->
+  <path
+    d="M 100 100
+       Q 70 95, 55 65
+       Q 50 45, 70 50
+       Q 90 55, 100 100
+       Z"
+    fill="url(#topLight)"
+  />
+
+  <!-- Top right petal/wing -->
+  <path
+    d="M 100 100
+       Q 105 70, 135 55
+       Q 155 50, 150 65
+       Q 145 95, 100 100
+       Z"
+    fill="url(#topLight)"
+  />
+
+  <!-- Bottom left petal -->
+  <path
+    d="M 100 100
+       Q 90 115, 70 130
+       Q 55 145, 60 135
+       Q 70 110, 100 100
+       Z"
+    fill="url(#bottomShadow)"
+  />
+
+  <!-- Bottom right petal -->
+  <path
+    d="M 100 100
+       Q 110 115, 130 130
+       Q 145 145, 140 135
+       Q 130 110, 100 100
+       Z"
+    fill="url(#bottomShadow)"
+  />
+
+  <!-- Center core - blue accent -->
+  <circle cx="100" cy="100" r="8" fill="url(#blueAccent)"/>
+
+</svg>

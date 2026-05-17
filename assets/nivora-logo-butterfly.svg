@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <defs>
+    <!-- Top-lit gradient like the butterfly image -->
+    <linearGradient id="wingTopLeft" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="40%" style="stop-color:#e8ecf2"/>
+      <stop offset="100%" style="stop-color:#9ca3af"/>
+    </linearGradient>
+
+    <linearGradient id="wingTopRight" x1="80%" y1="0%" x2="20%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa"/>
+      <stop offset="40%" style="stop-color:#dde2ea"/>
+      <stop offset="100%" style="stop-color:#8891a0"/>
+    </linearGradient>
+
+    <linearGradient id="wingBottomLeft" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4d9e2"/>
+      <stop offset="100%" style="stop-color:#6b7280"/>
+    </linearGradient>
+
+    <linearGradient id="wingBottomRight" x1="70%" y1="0%" x2="30%" y2="100%">
+      <stop offset="0%" style="stop-color:#c9cfd9"/>
+      <stop offset="100%" style="stop-color:#5f6977"/>
+    </linearGradient>
+  </defs>
+
+  <!--
+    ╔════════════════════════════════════════════╗
+    ║           NIVORA LOGO                      ║
+    ║   Elegant butterfly-like flowing shape     ║
+    ║   Representing: Intelligence, Grace, Flow  ║
+    ╚════════════════════════════════════════════╝
+  -->
+
+  <!-- Upper Left Wing - Large, sweeping curve -->
+  <path
+    d="M 120 120
+       C 100 110, 70 90, 55 55
+       C 45 30, 60 25, 80 40
+       C 100 55, 115 90, 120 120
+       Z"
+    fill="url(#wingTopLeft)"
+  />
+
+  <!-- Upper Right Wing - Mirror of left -->
+  <path
+    d="M 120 120
+       C 140 110, 170 90, 185 55
+       C 195 30, 180 25, 160 40
+       C 140 55, 125 90, 120 120
+       Z"
+    fill="url(#wingTopRight)"
+  />
+
+  <!-- Lower Left Wing - Smaller, teardrop shape -->
+  <path
+    d="M 120 120
+       C 110 130, 90 150, 80 175
+       C 75 195, 85 200, 100 185
+       C 110 170, 118 140, 120 120
+       Z"
+    fill="url(#wingBottomLeft)"
+  />
+
+  <!-- Lower Right Wing - Mirror of left -->
+  <path
+    d="M 120 120
+       C 130 130, 150 150, 160 175
+       C 165 195, 155 200, 140 185
+       C 130 170, 122 140, 120 120
+       Z"
+    fill="url(#wingBottomRight)"
+  />
+
+</svg>

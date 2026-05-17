@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Gradient for the main shape - subtle silver/white gradient like the butterfly -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e8eaed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8bcc4;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Gradient for depth/shadow -->
+    <linearGradient id="shadowGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8a9099;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d0d4db;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Blue accent gradient for Nivora brand -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#b1c5ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0051c3;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Soft glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!--
+    Nivora Logo - Abstract "N" formed by two flowing shapes
+    Inspired by: infinity, flow, intelligence, elegance
+  -->
+
+  <!-- Left flowing shape (like a sail or wave) -->
+  <path
+    d="M 60 140
+       Q 40 100, 60 60
+       Q 75 40, 95 55
+       Q 85 80, 80 100
+       Q 75 120, 60 140
+       Z"
+    fill="url(#mainGradient)"
+    filter="url(#glow)"
+  />
+
+  <!-- Right flowing shape (mirror, forming abstract N) -->
+  <path
+    d="M 140 60
+       Q 160 100, 140 140
+       Q 125 160, 105 145
+       Q 115 120, 120 100
+       Q 125 80, 140 60
+       Z"
+    fill="url(#shadowGradient)"
+    filter="url(#glow)"
+  />
+
+  <!-- Center connecting element (the bridge of the N) -->
+  <path
+    d="M 80 95
+       Q 100 85, 120 95
+       Q 115 105, 100 110
+       Q 85 105, 80 95
+       Z"
+    fill="url(#mainGradient)"
+    opacity="0.9"
+  />
+
+  <!-- Small accent dot (like a star/core) -->
+  <circle
+    cx="100"
+    cy="100"
+    r="6"
+    fill="url(#accentGradient)"
+    filter="url(#glow)"
+  />
+</svg>
